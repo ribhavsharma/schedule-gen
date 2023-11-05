@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="/upload_ics" method="POST">
+        <input name="file" id="file">
+        <button type="submit">submit</button>
+
+      
+                {% for event in event_list %}
+                    <p><b>{{event.name}}</b></p>
+                    <p>{{event.begin}}  -------  {{event.end}}</p>
+                {% endfor %}
+            
+    </form>
+</body>
+</html>
